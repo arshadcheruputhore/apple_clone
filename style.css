@@ -1424,20 +1424,41 @@ footer{
     .essential-img-container .essential-img{
         min-width: 50%;
         max-width: 90%;
-        height: 80vh;
-        flex: 0 0 80%;
+        height: 70vh;
+        flex: 0 0 100%;
+    }
+    .essential-img .essen-img1{
+        width: 100%;
+        min-height: 60%;
+    }
+    .essential-img .essen-img2{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .essen-img1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .essen-img2 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom;
     }
     .essential-img1 .essen-img-content{
-        transform: translateX(30%);
+        right: 50%;
     }
     .essential-img2 .essen-img-content{
-        transform: translateX(80%);
+        right: 50%;
     }
     .essen-img-content h1{
-        font-size: 4vw;
+        font-size: 1.3rem;
     }
     .essen-img-content p{
-        font-size: 2vw;
+        font-size: 15px;
     }
     .watch-essential-container .essen-img-btn{
         opacity: 1;
