@@ -1,9 +1,36 @@
 {
-    "redirects": [
+    "version": 2,
+    "public": true,
+    "builds": [
       {
-        "source": "/(.*)",
-        "destination": "https://apple-clone-seven-rouge.vercel.app/$1",
-        "permanent": true
+        "src": "index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "main.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "style.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "fonts/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "images/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "videos/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
       }
     ]
   }
