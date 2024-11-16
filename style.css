@@ -1422,10 +1422,10 @@ footer{
         padding: 10% 0;
     }
     .essential-img-container .essential-img{
-        min-width: 50%;
         max-width: 90%;
+        min-width: 300px;
         height: 70vh;
-        flex: 0 0 100%;
+        flex: 0 0 auto;
     }
     .essential-img .essen-img1{
         width: 100%;
@@ -1449,16 +1449,20 @@ footer{
         object-position: bottom;
     }
     .essential-img1 .essen-img-content{
-        right: 50%;
+        transform: translateX(15%);
     }
     .essential-img2 .essen-img-content{
-        right: 50%;
+        transform: translateX(40%);
     }
     .essen-img-content h1{
-        font-size: 1.3rem;
+        font-size: 5vw;
+        text-wrap: wrap;
     }
     .essen-img-content p{
-        font-size: 15px;
+        font-size: 3.5vw;
+    }
+    .essen-img-content span{
+        text-wrap: wrap;
     }
     .watch-essential-container .essen-img-btn{
         opacity: 1;
