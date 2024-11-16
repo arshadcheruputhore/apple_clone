@@ -18,9 +18,11 @@ function updateButtonVisibility() {
     // Show the right button if the container can be scrolled to the right
     if (currentScroll + containerVisibleWidth >= containerWidth) {
       rightBtn.style.opacity = 0;
+      rightBtn.style.pointerEvents = 'none';
     }
     else {
         rightBtn.style.opacity = 1;
+        rightBtn.style.pointerEvents = 'all';
     }
 }
 

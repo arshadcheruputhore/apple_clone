@@ -961,9 +961,11 @@ footer{
         background-color: #fafafc;
         transition: opacity 0.3s ease-in-out;
         opacity: 0;
+        pointer-events: none;
     }
     .scroll-btn.visible {
         opacity: 1; /* Fade in when visible */
+        pointer-events: all;
       }
     .watch-nav .left-btn{
         left: 0;
@@ -971,6 +973,7 @@ footer{
     }
     .watch-nav .right-btn{
         opacity: 1;
+        pointer-events: all;
         right: 0;
         border-left: 1px solid rgba(0, 0, 0, 0.185);
     }
@@ -999,10 +1002,14 @@ footer{
     .video-container {
         width: 90% !important;
         margin: auto;
-      }
-      .video-container video{
+    }
+    .video-container video{
         width: 100%;
         border-radius: 30px !important;
+    }
+    .video-container button{
+        bottom: 30px;
+        right: 30px;
     }
     .know-apple{
         margin-top: 20%;
@@ -1306,6 +1313,9 @@ footer{
     }
     .main-head h2{
         font-size: 20px;
+    }
+    .video-container {
+        height: 90vh;
     }
     .know-apple h1{
         font-size: 1.6rem;
