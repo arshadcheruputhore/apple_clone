@@ -1,6 +1,14 @@
 AOS.init();
 
 
+document.getElementById('open-triger').addEventListener('click', function () {
+    document.body.classList.add('no-scroll');
+  });
+
+document.getElementById('close-triger').addEventListener('click', function () {
+    document.body.classList.remove('no-scroll');
+});
+
 
 const container = document.querySelector('.watch-container');
 const leftBtn = document.querySelector('.left-btn');
