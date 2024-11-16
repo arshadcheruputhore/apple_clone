@@ -191,7 +191,6 @@ main .main-head{
 .img-scrl-container .scrolling-img{
     width: 400px;
     height: 740px;
-    /* aspect-ratio: 400 / 740; */
 }
 .img-scrl-container img{
     width: 100%;
@@ -480,10 +479,10 @@ main .main-head{
     padding: 25px 60px 25px 25px;
     min-height: 100%;
     min-width: 300px;
-    max-width: 90%;
+    max-width: 30%;
     position: relative;
     border-radius: 30px;
-    flex: 0 0 400px;
+    flex: 0 0 auto;
     cursor: pointer;
     transition: transform 0.5s ease;
 }
@@ -495,9 +494,11 @@ main .main-head{
 }
 .card-container .card-sub-head{
     font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.897);
 }
 .card-container .card-para{
     font-size: 18px;
+    color: rgba(0, 0, 0, 0.801);
 }
 .card-container button{
     position: absolute;
@@ -538,7 +539,7 @@ main .main-head{
 .watch-essential-container{
     width: 100%;
     height: auto;
-    padding: 10% 5% 100px;
+    padding: 8% 5% 0;
     position: relative;
 }
 .watch-essential-container .essential-main-head{
@@ -569,24 +570,24 @@ main .main-head{
     display: none;
 }
 .essential-img-container .essential-img{
-    width: 670px;
-    height: 600px;
+    /* width: 670px; */
+    max-width: 50%;
+    max-height: 600px;
     background-color: #f5f5f7;
     position: relative;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: hidden;
-    border-radius: 30px;
     cursor: pointer;
-    flex: 0 0 670px;
+    border-radius: 30px;
 }
 .essential-img .essen-img1{
     width: 100%;
-    height: 440px;
+    min-height: 70%;
 }
 .essential-img .essen-img2{
     width: 100%;
-    height: 800px;
+    height: 100%;
     overflow: hidden;
 }
 .essential-img img{
@@ -596,8 +597,9 @@ main .main-head{
 }
 .essential-img1 .essen-img-content{
     position: absolute;
-    top: 50px;
-    left: 25%;
+    top: 10%;
+    /* left: 25%; */
+    transform: translateX(50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -606,8 +608,9 @@ main .main-head{
 }
 .essential-img2 .essen-img-content{
     position: absolute;
-    top: 70px;
-    left: 35%;
+    top: 10%;
+    /* left: 35%; */
+    transform: translateX(90%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -615,7 +618,11 @@ main .main-head{
     justify-content: center;
 }
 .essen-img-content h1{
-    font-size: 1.7rem;
+    font-size: 1.8vw;
+}
+.essen-img-content p{
+    font-size: 1.2vw;
+    text-align: center;
 }
 .essen-img-content a{
     display: flex;
@@ -628,9 +635,11 @@ main .main-head{
 .watch-essential-container .essen-img-btn{
     position: absolute;
     right: 6%;
-    bottom: 100px;
+    bottom: 0;
     display: flex;
     gap: 20px;
+    opacity: 0;
+    pointer-events: none;
 }
 .essen-img-btn button{
     background-color: rgba(128, 128, 128, 0.336);
@@ -648,7 +657,7 @@ main .main-head{
     pointer-events: none;
 }
 .for-eachOther{
-    padding: 0 5%;
+    padding: 5%;
 }
 .eachOther-head h1{
     font-size: 3.3rem;
@@ -716,12 +725,12 @@ main .main-head{
 .apple-watch-items-container{
     width: 100%;
     height: auto;
-    margin-top: 10%;
     padding: 10% 5%;
     background-color: #fafafc;
 }
 .apple-items-head h1{
     font-size: 3.5rem;
+    color: rgba(0, 0, 0, 0.747);
 }
 .apple-watch-items{
     margin-top: 50px;
@@ -1003,7 +1012,6 @@ footer{
         padding: 10px 9%;
         text-align: center;
     }
-   
     .video-container {
         width: 90% !important;
         margin: auto;
@@ -1028,7 +1036,6 @@ footer{
     .img-scrl-container .scrolling-img{
         width: 280px;
         height: 600px;
-        /* aspect-ratio: 400 / 740; */
     }
     .watch-pro-container .pro-container{
         align-items: start;
@@ -1122,24 +1129,20 @@ footer{
         font-size: 2.4rem;
     }
     .essential-img-container .essential-img{
-        width: 400px;
-        height: 500px;
-        flex: 0 0 450px;
-    }
-    .essential-img .essen-img1{
-        height: 360px;
+        max-width: 50%;
+        height: 90vh;
     }
     .essential-img1 .essen-img-content{
-        left: 20%;
+        transform: translateX(30%);
     }
     .essential-img2 .essen-img-content{
-        left: 25%;
+        transform: translateX(60%);
     }
     .essen-img-content h1{
-        font-size: 1.3rem;
+        font-size: 2.5vw;
     }
-    .watch-essential-container .essen-img-btn{
-        bottom: 80px;
+    .essen-img-content p{
+        font-size: 1.5vw;
     }
     .eachOther-head h1{
         font-size: 3rem;
@@ -1149,7 +1152,7 @@ footer{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 5%;
+        padding: 10% 8%;
     }
     .select-item-content{
         width: 100%;
@@ -1187,7 +1190,7 @@ footer{
         justify-content: space-between;
         align-items: center;
         padding-top: 15px;
-        border-top: 1px solid rgba(0, 0, 0, 0.288);
+        border-top: 1px solid rgba(0, 0, 0, 0.171);
     }
     .apple-items-head h1{
         font-size: 3rem;
@@ -1331,6 +1334,17 @@ footer{
     .know-apple h1{
         font-size: 1.6rem;
     }
+    .img-scrl-container .scrolling-img{
+        width: 250px;
+        height: 550px;
+    }
+    .scrolling-img .slide-btn{
+        bottom: 35px;
+        right: 7%;
+    }
+    .explore-container{
+        margin-top: 15%;
+    }
     .explore-head{
         display: flex;
         flex-direction: column;
@@ -1345,12 +1359,30 @@ footer{
         font-size: 15px;
         margin: 0;
     }
+    .watch-pro-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 15%;
+        padding: 10% 5%;
+    }
+    .watch-pro-container .pro-container{
+        width: max-content;
+        flex: 0 0 250px;
+    }
+    .pro-container .pro-img{
+        width: 200px;
+        height: 200px;
+    }
     .watch-feature-container{
         padding-left: 20px;
     }
     .watch-feature-container .feature-div{
         justify-content: center;
         align-items: start;
+    }
+    .card-main-container{
+        padding: 17% 0 150px 5%;
     }
     .card-main-head{
         display: flex;
@@ -1363,41 +1395,56 @@ footer{
         flex-direction: column;
         font-size: 1.8rem;
     }
+    .card-container .card-sub-head{
+        font-size: 0.8rem;
+    }
+    .card-container .card-para{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .card-main-container .card-slide-btn{
+        bottom: 100px;
+    }
+    .watch-essential-container{
+        padding: 15% 5% 20px;
+    }
     .watch-essential-container .essential-main-head{
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 10px;
+        gap: 15px;
     }
     .essential-main-head h1{
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .essential-img-container{
+        gap: 20px;
+        padding: 10% 0;
     }
     .essential-img-container .essential-img{
-        width: 250px;
-        height: 450px;
-        flex: 0 0 300px;
-    }
-    .essential-img .essen-img1{
-        height: 280px;
+        min-width: 50%;
+        max-width: 90%;
+        height: 80vh;
+        flex: 0 0 80%;
     }
     .essential-img1 .essen-img-content{
-        left: 15%;
+        transform: translateX(30%);
     }
     .essential-img2 .essen-img-content{
-        left: 20%;
+        transform: translateX(80%);
     }
     .essen-img-content h1{
-        font-size: 1.1rem;
+        font-size: 4vw;
     }
-    .essen-img-content a{
-        font-size: 13px;
-    } 
     .essen-img-content p{
-        font-size: 13px;
-        text-align: center;
+        font-size: 2vw;
     }
     .watch-essential-container .essen-img-btn{
-        bottom: 70px;
+        opacity: 1;
+        pointer-events: all;
+    }
+    .for-eachOther{
+        margin-top: 8%;
     }
     .eachOther-head h1{
         font-size: 2rem;
@@ -1408,16 +1455,20 @@ footer{
     .apple-items-head h1{
         font-size: 2.5rem;
     }
+    .apple-watch-items-container{
+        padding: 20% 5% 25%;
+    }
+    .apple-items-head h1{
+        font-size: 2rem;
+    }
     .explore-watch-list h3{
         font-size: 1.3rem;
-        color: black;
     }
     .explore-watch-list ul li span{
         font-size: 14px;
     }
     .shop-watch-list h6, .more-watch-list h6{
-        font-size: 1rem;
-        color: rgba(0, 0, 0, 0.678);
+        font-size: 15px;
     }
     .explore-watch-list ul li:first-child, .shop-watch-list ul li:first-child, .more-watch-list ul li:first-child{
         font-size: 15px;
