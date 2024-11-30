@@ -187,10 +187,11 @@ main .main-head{
     height: auto;
     position: relative;
     transition: transform 0.4s ease;
+    flex: 0 0 auto;
 }
 .img-scrl-container .scrolling-img{
     width: 400px;
-    height: 740px;
+    height: 760px;
 }
 .img-scrl-container img{
     width: 100%;
@@ -478,8 +479,8 @@ main .main-head{
     gap: 15px;
     padding: 25px 60px 25px 25px;
     min-height: 100%;
-    min-width: 300px;
-    max-width: 30%;
+    width: 90%;
+    max-width: 400px;
     position: relative;
     border-radius: 30px;
     flex: 0 0 auto;
@@ -571,24 +572,24 @@ main .main-head{
 }
 .essential-img-container .essential-img{
     /* width: 670px; */
-    max-width: 50%;
-    max-height: 600px;
+    width: 50%;
+    height: 600px;
     background-color: #f5f5f7;
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    overflow-y: hidden;
     cursor: pointer;
     border-radius: 30px;
+    overflow: hidden;
+    flex: 0 0 1;
 }
 .essential-img .essen-img1{
     width: 100%;
-    min-height: 70%;
+    height: 70%;
 }
 .essential-img .essen-img2{
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 .essential-img img{
     width: 100%;
@@ -597,9 +598,9 @@ main .main-head{
 }
 .essential-img1 .essen-img-content{
     position: absolute;
-    top: 10%;
-    /* left: 25%; */
-    transform: translateX(50%);
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -608,26 +609,29 @@ main .main-head{
 }
 .essential-img2 .essen-img-content{
     position: absolute;
-    top: 10%;
-    /* left: 35%; */
-    transform: translateX(90%);
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     justify-content: center;
 }
-.essen-img-content h1{
-    font-size: 1.8vw;
+.essen-img-content h2{
+    font-size: 1.7rem;
+    text-align: center;
 }
 .essen-img-content p{
-    font-size: 1.2vw;
+    font-size: 1rem;
     text-align: center;
+    margin: 10px 0;
 }
 .essen-img-content a{
     display: flex;
     align-items: center;
     color: #1a7fdd;
+    text-wrap: nowrap;
 }
 .essen-img-content a:hover span{
     text-decoration: underline;
@@ -883,6 +887,7 @@ footer{
 
 
 
+
 @media (max-width: 992px) {
     .no-scroll {
         overflow: hidden;
@@ -1129,20 +1134,16 @@ footer{
         font-size: 2.4rem;
     }
     .essential-img-container .essential-img{
-        max-width: 50%;
-        height: 90vh;
+        height: 500px;
     }
-    .essential-img1 .essen-img-content{
-        transform: translateX(30%);
-    }
-    .essential-img2 .essen-img-content{
-        transform: translateX(60%);
-    }
-    .essen-img-content h1{
-        font-size: 2.5vw;
+    .essen-img-content h2{
+        font-size: 1.3rem;
     }
     .essen-img-content p{
-        font-size: 1.5vw;
+        font-size: 14px;
+    }
+    .essen-img-content a{
+        font-size: 15px;
     }
     .eachOther-head h1{
         font-size: 3rem;
@@ -1422,47 +1423,11 @@ footer{
         padding: 10% 0;
     }
     .essential-img-container .essential-img{
-        max-width: 90%;
-        min-width: 300px;
-        height: 70vh;
+        width: 90%;
         flex: 0 0 auto;
     }
-    .essential-img .essen-img1{
-        width: 100%;
-        min-height: 60%;
-    }
-    .essential-img .essen-img2{
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    .essen-img1 img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    .essen-img2 img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: bottom;
-    }
-    .essential-img1 .essen-img-content{
-        transform: translateX(15%);
-    }
-    .essential-img2 .essen-img-content{
-        transform: translateX(40%);
-    }
-    .essen-img-content h1{
-        font-size: 5vw;
-        text-wrap: wrap;
-    }
-    .essen-img-content p{
-        font-size: 3.5vw;
-    }
-    .essen-img-content span{
-        text-wrap: wrap;
+    .essen-img-content h2{
+        font-size: 1.2rem;
     }
     .watch-essential-container .essen-img-btn{
         opacity: 1;

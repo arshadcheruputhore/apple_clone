@@ -223,40 +223,55 @@ rightFeatBtn.addEventListener('click', () => {
 
 
 const CardmainContainer = document.querySelector('.card-main-container');
-const CardslideContainer = CardmainContainer.querySelector('.card-slide-container'); // First watch div in the container
-const EachCard = CardslideContainer.querySelector('.card-container');
-const CardscrlAmount = EachCard.offsetWidth; 
-
+const CardslideContainer = CardmainContainer.querySelector('.card-slide-container'); // The sliding container
 const CardleftBtn = document.querySelector('.cardleft-btn');
 const CardrightBtn = document.querySelector('.cardright-btn');
 
+// Function to dynamically get card width
+function getCardWidth() {
+  const EachCard = CardslideContainer.querySelector('.card-container');
+  return EachCard.offsetWidth; // Dynamically get the width of a card
+}
 
+// Enable/disable buttons based on scroll position
 CardslideContainer.addEventListener('scroll', () => {
+  const maxScrollLeft = CardslideContainer.scrollWidth - CardslideContainer.clientWidth;
+
   if (CardslideContainer.scrollLeft > 0) {
     CardleftBtn.style.opacity = 1;
     CardleftBtn.style.pointerEvents = 'all';
-      slideButton(CardrightBtn, CardslideContainer);
-  }
-  else {
+  } else {
     CardleftBtn.style.opacity = 0.5;
     CardleftBtn.style.pointerEvents = 'none';
   }
+
+  if (CardslideContainer.scrollLeft >= maxScrollLeft) {
+    CardrightBtn.style.opacity = 0.5;
+    CardrightBtn.style.pointerEvents = 'none';
+  } else {
+    CardrightBtn.style.opacity = 1;
+    CardrightBtn.style.pointerEvents = 'all';
+  }
 });
 
-
+// Scroll left
 CardleftBtn.addEventListener('click', () => {
-    CardslideContainer.scrollBy({
-  left: -CardscrlAmount,
-  behavior: 'smooth',
+  const cardWidth = getCardWidth(); // Get card width dynamically
+  CardslideContainer.scrollBy({
+    left: -cardWidth,
+    behavior: 'smooth',
   });
 });
-  
+
+// Scroll right
 CardrightBtn.addEventListener('click', () => {
-    CardslideContainer.scrollBy({
-  left: CardscrlAmount,
-  behavior: 'smooth',
+  const cardWidth = getCardWidth(); // Get card width dynamically
+  CardslideContainer.scrollBy({
+    left: cardWidth,
+    behavior: 'smooth',
   });
 });
+
 
 
 
@@ -295,3 +310,8 @@ ImgRightBtn.addEventListener('click', () => {
   behavior: 'smooth',
   });
 });
+
+
+
+
+  
